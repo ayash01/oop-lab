@@ -12,12 +12,12 @@ class Product {
     }
 }
 
-class main {
-    public static void main(String args[]) {
+class q1 {
+    public static void main(String[] args) {
 
-        String pname[] = new String[3];
-        int pcode[] = new int[3];
-        int price[] = new int[3];
+        String[] pname = new String[3];
+        int[] pcode = new int[3];
+        int[] price = new int[3];
 
         Scanner input = new Scanner(System.in);
 
@@ -36,16 +36,27 @@ class main {
         pcode[2] = Integer.parseInt(input.nextLine());
         price[2] = Integer.parseInt(input.nextLine());
 
-        if (price[0] < price[1]  &&  price[0] < price[2]) {
-            System.out.println("Product 1 has the lowest price (" + price[0] + ")");
+        Product product1 = new Product(pname[0], pcode[0], price[0]);
+        Product product2 = new Product(pname[1], pcode[1], price[1]);
+        Product product3 = new Product(pname[2], pcode[2], price[2]);
+
+        if (product1.price < product2.price) {
+            if (product1.price < product3.price) {
+                System.out.println("Product 1 has the lowest price (" + price[0] + ")");
+            }
+            else if (product1.price == product3.price) {
+                System.out.println("Product 1 & 3 have the lowest price");
+            }
         }
-        else if (price[1] < price[0] && price[1] < price[2]) {
+
+        /*
+        else if (product2.price < product1.price && product2.price < product3.price) {
             System.out.println("Product 2 has the lowest price (" + price[1] + ")");
         }
-        else if (price[2] < price[0] && price[2] < price[0]) {
+        else if (product3.price < product1.price && product3.price < product2.price) {
             System.out.println("Product 3 has the lowest price (" + price[2] + ")");
         }
-        else if (price[0] == price[1] && price[0] < price[2]) {
+        else if (product1.price == product2.price && product1.price < product1.price) {
             System.out.println("Product 1 & 2 have the lowest price");
         }
         else if (price[1] == price[2] && price[1] < price[0]) {
@@ -57,5 +68,6 @@ class main {
         else {
             System.out.println("All products have the same price");
         }
+        */
     }
 }
