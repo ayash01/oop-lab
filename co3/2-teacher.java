@@ -54,6 +54,7 @@ class TeacherDetails {
         for (i = 0; i < num; i++) {
             teachers[i].display();
         }
+
         input.close();
     }
 }

@@ -29,38 +29,34 @@ class AreaShapes {
             System.out.print("Select a shape:\n\n1. Rectangle\n2. Square\n3. Triangle\n4. Circle\n\n0. Exit program\n\n-> ");
             ch = input.nextInt();
 
-            switch(ch) {
-                case 1: {
+            switch (ch) {
+                case 1 -> {
                     System.out.print("Enter rectangle length and breadth: ");
                     int len = input.nextInt();
                     int br = input.nextInt();
                     int area = shape.area(len, br);
                     System.out.println("\nRectangle area: " + shape.area(len, br));
-                    break;
                 }
-                case 2: {
+                case 2 -> {
                     System.out.print("Enter square side length: ");
                     int side = input.nextInt();
                     System.out.println("\nSquare area: " + shape.area(side));
-                    break;
+
                 }
-                case 3: {
+                case 3 -> {
                     System.out.print("Enter triangle length and breadth: ");
                     double base = input.nextDouble();
                     double high = input.nextDouble();
                     double area = shape.area(base, high);
                     System.out.println("\nTriangle area: " + shape.area(base, high));
-                    break;
                 }
-                case 4: {
+                case 4 -> {
                     System.out.print("Enter circle radius: ");
                     double rad = input.nextDouble();
                     System.out.println("\nCircle area: " + shape.area(rad));
                 }
-                case 0:
-                    System.exit(0);
-                default:
-                    System.out.println("Invalid input");
+                case 0 -> System.exit(0);
+                default -> System.out.println("Invalid input");
             }
         } while (true);
     }
