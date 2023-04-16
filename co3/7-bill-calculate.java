@@ -43,7 +43,7 @@ class Order implements Bill {
             System.out.printf("%d\t\t%s\t\t%d\t\t\t\t%d\t\t%d\n", this.product_id[i], this.name[i], this.quantity[i], this.unit_price[i], this.total[i]);
         }
         System.out.println("---------------------------------------------------------------------------");
-        System.out.println("\t\t\t\t\t\t\tNet Amount: " + this.net_amount + "\n");
+        System.out.println("\t\t\t\t\t\t\t\tNet Amount: " + this.net_amount + "\n");
     }
 }
 
