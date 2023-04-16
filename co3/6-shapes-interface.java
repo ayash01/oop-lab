@@ -62,6 +62,6 @@ class shapesCalc {
                 }
                 default -> System.out.print("Invalid selection");
             }
-        } while (true);
+        } while(true);
     }
 }
