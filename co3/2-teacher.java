@@ -22,7 +22,7 @@ class Teacher extends Employee {
     }
 
     void display() {
-        System.out.println("ID: " + Empid + "Name: " + Name + "Salary: " + Salary + "Address: " + Address);
+        System.out.println("ID: " + Empid + "\nName: " + Name + "\nSalary: " + Salary + "\nAddress: " + Address + "\nDepartment: " + department + "\nSubjects: " + Subjects);
     }
 }
 
@@ -30,7 +30,7 @@ class TeacherDetails {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter number of teachers: ");
+        System.out.print("Enter number of teachers: ");
         int num = input.nextInt(), i;
 
         Teacher[] teachers = new Teacher[num];
@@ -39,7 +39,7 @@ class TeacherDetails {
         String name, addr, dept, subs;
 
         for(i = 0; i < num; i++) {
-            System.out.println("Enter details of teacher " + i+1);
+            System.out.println("Enter details of teacher " + (i+1));
             id = input.nextInt();
             name = input.next();
             sal = input.nextInt();

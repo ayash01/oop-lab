@@ -18,6 +18,10 @@ class Employee2 extends Person {
 
     Employee2(String Name, String Gender, String Address, int Age, int Empid, int Salary, String Company_name, String Qualification) {
         super(Name, Gender, Address, Age);
+        this.Empid = Empid;
+        this.Salary = Salary;
+        this.Company_name = Company_name;
+        this.Qualification = Qualification;
     }
 }
 
@@ -41,7 +45,7 @@ class personInfo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter number of teachers: ");
+        System.out.print("Enter number of teachers: ");
         int num = input.nextInt(), i;
 
         Teacher2[] teachers = new Teacher2[num];
@@ -49,7 +53,7 @@ class personInfo {
         String name, gender, addr, dept, company, qual, subs;
 
         for(i = 0; i < num; i++) {
-            System.out.println("Enter details of teacher " + i++);
+            System.out.println("Enter details of teacher " + (i+1));
             name = input.next();
             gender = input.next();
             addr = input.next();
