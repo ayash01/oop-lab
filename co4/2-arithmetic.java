@@ -11,6 +11,7 @@ class arithmeticDemo {
             int choice = input.nextInt();
             if (choice == 0) {
                 System.out.print("Exiting program...");
+                input.close();
                 System.exit(0);
             }
             else if (choice >=1 && choice <= 4) {

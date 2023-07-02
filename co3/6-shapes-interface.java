@@ -7,10 +7,10 @@ interface Shape {
     double perimeter();
 }
 
-class Circle implements Shape {
+class Circles implements Shape {
     double radius;
 
-    Circle(double radius) {
+    Circles(double radius) {
         this.radius = radius;
     }
 
@@ -23,10 +23,10 @@ class Circle implements Shape {
     }
 }
 
-class Rectangle implements Shape {
+class Rectangles implements Shape {
     double length, breadth;
 
-    Rectangle(double length, double breadth) {
+    Rectangles(double length, double breadth) {
         this.length = length;
         this.breadth = breadth;
     }
@@ -52,12 +52,12 @@ class shapesCalc {
                 case 0 -> System.exit(0);
                 case 1 -> {
                     System.out.print("Enter radius of circle: ");
-                    Circle circ1 = new Circle(input.nextDouble());
+                    Circles circ1 = new Circles(input.nextDouble());
                     System.out.println("Circle\nArea: " + circ1.area() + "\nPerimeter: " + circ1.perimeter());
                 }
                 case 2 -> {
                     System.out.print("Enter length and breadth of rectangle: ");
-                    Rectangle rect1 = new Rectangle(input.nextDouble(), input.nextDouble());
+                    Rectangles rect1 = new Rectangles(input.nextDouble(), input.nextDouble());
                     System.out.print("Rectangle\nArea: " + rect1.area() + "\nPerimeter: " + rect1.perimeter());
                 }
                 default -> System.out.print("Invalid selection");

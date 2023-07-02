@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main2 {
+class linkedListDemo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -14,6 +14,7 @@ class Main2 {
             switch (choice) {
                 case 0 -> {
                     System.out.println("Exiting program...");
+                    input.close();
                     System.exit(0);
                 }
                 case 1 -> {

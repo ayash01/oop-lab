@@ -1,9 +1,9 @@
 import java.util.*;
 
-class Main {
+class stackRemove {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
 
         do {
             System.out.println();
@@ -12,6 +12,7 @@ class Main {
             switch (choice) {
                 case 0 -> {
                     System.out.println("Exiting program...");
+                    input.close();
                     System.exit(0);
                 }
                 case 1 -> {

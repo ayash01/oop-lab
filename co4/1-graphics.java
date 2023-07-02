@@ -14,6 +14,7 @@ class graphicsDemo {
             switch(choice) {
                 case 0 -> {
                     System.out.print("Exiting program...");
+                    input.close();
                     System.exit(0);
                 }
                 case 1 -> {
