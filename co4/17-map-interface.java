@@ -5,7 +5,7 @@ class MapDemo {
         Scanner input = new Scanner(System.in);
         Map<Integer, String> map = new HashMap<>();
 
-        do {
+        while (true) {
             System.out.println("Select an option:\n1. Insert\n2. Update\n3. Delete\n4. Display\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
 
@@ -39,6 +39,6 @@ class MapDemo {
                 case 4 -> System.out.println("Current map: " + map);
                 default -> System.out.println("Invalid choice. Please select a valid option.");
             }
-        } while (true);
+        }
     }
 }

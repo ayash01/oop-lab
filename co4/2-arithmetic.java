@@ -5,7 +5,7 @@ class arithmeticDemo {
     public static void main(String[]args) {
         Scanner input = new Scanner(System.in);
         double num1 = 0, num2 = 0;
-        do {
+        while (true) {
             System.out.println("\n");
             System.out.print("Select an arithmetic operation:\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
@@ -38,6 +38,6 @@ class arithmeticDemo {
                 }
                 default -> System.out.println("Invalid input");
             }
-        } while(true);
+        }
     }
 }

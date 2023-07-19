@@ -45,7 +45,7 @@ class shapesCalc {
         Scanner input = new Scanner(System.in);
         int ch;
 
-        do {
+        while (true) {
             System.out.print("\nPlease select a shape to display its area and perimeter:\n1. Circle\n2. Rectangle\n\n0. Exit\n\n-> ");
             ch = input.nextInt();
             switch (ch) {
@@ -62,6 +62,6 @@ class shapesCalc {
                 }
                 default -> System.out.print("Invalid selection");
             }
-        } while(true);
+        }
     }
 }

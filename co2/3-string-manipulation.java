@@ -32,7 +32,7 @@ class strMan {
         int ch;
         String str1, str2;
         String[] strings;
-        do {
+        while (true) {
             System.out.print("\nEnter string method to demonstrate:\n\n1. Uppercase\n2. Lowercase\n3. Concatenate two strings\n4. Split string into array\n5. Replace character in string\n6. Find length of string\n\n0. Exit\n\n-> ");
             ch = input.nextInt();
             switch (ch) {
@@ -77,6 +77,6 @@ class strMan {
                 }
                 default -> System.out.println("Invalid choice");
             }
-        } while (true);
+        }
     }
 }

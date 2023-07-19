@@ -52,7 +52,7 @@ class bookInfo {
         int ch, price;
         String title, author, publisher;
 
-        do {
+        while (true) {
             System.out.println("\nBook Info:\n--------------");
             System.out.print("Select a genre:\n\n1. Literature\n2. Fiction\n\n0. Exit program\n\n-> ");
             ch = input.nextInt();
@@ -79,7 +79,7 @@ class bookInfo {
                 case 0 -> System.exit(0);
                 default -> System.out.println("Invalid input");
             }
-        } while (true);
+        }
     }
 }
 

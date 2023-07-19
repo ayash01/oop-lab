@@ -5,7 +5,7 @@ class DequeDemo {
         Scanner input = new Scanner(System.in);
         Deque<Integer> deque= new ArrayDeque<>();
 
-        do {
+        while (true) {
             System.out.println();
             System.out.print("Select an option:\n1. Enqueue (front)\n2. Enqueue (rear)\n3. Dequeue (front)\n4. Dequeue (rear)\n5. Display\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
@@ -37,6 +37,6 @@ class DequeDemo {
                 }
                 default -> System.out.println("Invalid choice. Please select a valid option.");
             }
-        } while (true);
+        }
     }
 }

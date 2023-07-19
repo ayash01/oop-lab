@@ -5,7 +5,7 @@ class priorityQueueDemo {
         Scanner input = new Scanner(System.in);
         PriorityQueue<Integer> pQueue= new PriorityQueue<>();
 
-        do {
+        while (true) {
             System.out.println();
             System.out.print("Select an option:\n1. Enqueue\n2. Dequeue\n3. Display\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
@@ -29,6 +29,6 @@ class priorityQueueDemo {
                 }
                 default -> System.out.println("Invalid choice. Please select a valid option.");
             }
-        } while (true);
+        }
     }
 }

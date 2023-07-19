@@ -5,7 +5,7 @@ class LinkedHashSetDemo {
         Scanner input = new Scanner(System.in);
         Set<Integer> set = new LinkedHashSet<>();
 
-        do {
+        while (true) {
             System.out.print("");
             System.out.print("Select an option:\n1. Insert\n2. Delete\n3. Display\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
@@ -29,7 +29,6 @@ class LinkedHashSetDemo {
                 }
                 default -> System.out.println("Invalid choice. Please select a valid option.");
             }
-
-        } while (true);
+        }
     }
 }

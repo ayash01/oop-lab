@@ -6,7 +6,7 @@ class graphicsDemo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        do {
+        while (true) {
             System.out.println("\n");
             System.out.print("Select a shape:\n1. Square\n2. Rectangle\n3. Circle\n4. Triangle\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
@@ -52,7 +52,7 @@ class graphicsDemo {
                 }
                 default -> System.out.print("Invalid input");
             }
-        } while (true);
+        }
     }
 }
 

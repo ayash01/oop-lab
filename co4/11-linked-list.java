@@ -6,7 +6,7 @@ class linkedListDemo {
 
         LinkedList<Integer> linkedlist= new LinkedList<Integer>();
 
-        do {
+        while (true) {
             System.out.println();
             System.out.print("Select an option:\n1. Insert Element\n2. Display\n3. Remove all elements\n0. Exit\n-> ");
             int choice = input.nextInt();
@@ -34,6 +34,6 @@ class linkedListDemo {
                 }
                 default -> System.out.println("Invalid option");
             }
-        } while(true);
+        }
     }
 }

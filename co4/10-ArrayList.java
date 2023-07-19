@@ -14,7 +14,7 @@ class arrayList {
 
         ArrayList<String> list = new ArrayList<>();
 
-        do {
+        while (true) {
             System.out.println();
             System.out.print("Select an option:\n1. Add String to list\n2. Remove String from list\n3. Clear List\n4. Sort list\n5. Display List\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
@@ -63,6 +63,6 @@ class arrayList {
                 }
                 default -> System.out.println("Invalid choice. Please select a valid option.");
             }
-        } while (true);
+        }
     }
 }

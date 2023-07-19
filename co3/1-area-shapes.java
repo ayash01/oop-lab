@@ -24,7 +24,7 @@ class AreaShapes {
         Scanner input = new Scanner(System.in);
         Shapes shape = new Shapes();
 
-        do {
+        while (true) {
             System.out.println("\nArea Calculator\n----------------");
             System.out.print("Select a shape:\n\n1. Rectangle\n2. Square\n3. Triangle\n4. Circle\n\n0. Exit program\n\n-> ");
             ch = input.nextInt();
@@ -58,6 +58,6 @@ class AreaShapes {
                 case 0 -> System.exit(0);
                 default -> System.out.println("Invalid input");
             }
-        } while (true);
+        }
     }
 }

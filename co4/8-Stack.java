@@ -5,7 +5,7 @@ class stackDemo {
         Scanner input = new Scanner(System.in);
         Stack<Integer> stack = new Stack<>();
 
-        do {
+        while (true) {
             System.out.println();
             System.out.print("Select an option:\n1. Push\n2. Pop\n3. Display\n\n0. Exit\n\n-> ");
             int choice = input.nextInt();
@@ -35,6 +35,6 @@ class stackDemo {
                     }
                 }
             }
-        } while (true);
+        }
     }
 }

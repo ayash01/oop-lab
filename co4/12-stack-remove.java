@@ -5,7 +5,7 @@ class stackRemove {
         Scanner input = new Scanner(System.in);
         Stack<Integer> stack = new Stack<>();
 
-        do {
+        while (true) {
             System.out.println();
             System.out.print("Select an option:\n1. Push element\n2. Display\n3. Remove element from position\n0. Exit\n-> ");
             int choice = input.nextInt();
@@ -31,6 +31,6 @@ class stackRemove {
                 }
                 default -> System.out.println("Invalid option");
             }
-        } while(true);
+        }
     }
 }
