@@ -21,18 +21,17 @@ class listDir {
 
             for(File file: files){
                 if(file.isDirectory())
-                    System.out.printf("Directory - %s\n",file.getName());
+                    System.out.printf(file.getName());
                 if(file.isFile()){
-                    System.out.printf("File - %s\n",file.getName());
+                    System.out.println(file.getName());
                     if(file.getName().equals(key))
                         found = true;
                 }
             }
-            if(found)
+            if (found)
                 System.out.printf("File %s found\n", key);
             else
-                System.out.print("File not found\n");
-
+                System.out.println("File not found");
         }
     }
 }
