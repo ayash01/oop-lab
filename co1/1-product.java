@@ -22,7 +22,7 @@ class q1 {
         Scanner input = new Scanner(System.in);
 
         for (int i = 0; i < 3; i++) {
-            System.out.println("Enter name, product code, and price of product " + (i+1) + ": ");
+            System.out.print("Enter name, product code, and price of product " + (i+1) + ": ");
             pname[i] = input.nextLine();
             pcode[i] = Integer.parseInt(input.nextLine());
             price[i] = Integer.parseInt(input.nextLine());

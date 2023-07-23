@@ -1,17 +1,17 @@
 import java.net.Socket;
 import java.io.*;
 
-class Client {
+class TCPClient {
     public static void main(String[] args) {
         try {
-            System.out.println("Client started");
-
             Socket socket = new Socket("127.0.0.1", 3000);
             System.out.println("Connected to server at " + socket.getInetAddress().getHostAddress() + ":3000");
 
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+
+            System.out.println("Client started");
 
             while (true) {
                 System.out.print("Enter message: ");

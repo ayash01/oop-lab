@@ -1,4 +1,5 @@
 import java.net.*;
+import java.util.Scanner;
 
 class UDPClient {
     public static void main(String[] args) {
@@ -9,10 +10,12 @@ class UDPClient {
             InetAddress serverAddress = InetAddress.getByName("127.0.0.1");
             System.out.println("Connected to server at " + serverAddress.getHostAddress() + ":3000");
 
+            Scanner scanner = new Scanner(System.in);
+
             while (true) {
                 byte[] sendData;
                 System.out.print("Enter message: ");
-                String str = System.console().readLine();
+                String str = scanner.nextLine();
                 sendData = str.getBytes();
                 DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, serverAddress, 3000);
                 clientSocket.send(sendPacket);

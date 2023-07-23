@@ -1,13 +1,15 @@
 import java.net.*;
+import java.util.Scanner;
 
 class UDPServer {
     public static void main(String[] args) {
-
         try {
-            System.out.println("Server started");
             DatagramSocket serverSocket = new DatagramSocket(3000);
             InetAddress serverAddress = InetAddress.getLocalHost();
+            System.out.println("Server started");
             System.out.println("Server listening on " + serverAddress.getHostAddress() + ":3000");
+
+            Scanner input = new Scanner(System.in);
 
             while (true) {
                 byte[] receiveData = new byte[1024];
@@ -17,8 +19,8 @@ class UDPServer {
                 System.out.println("Received message from client: " + receivePacket.getAddress().getHostAddress() + ": " + message);
 
                 byte[] sendData;
-                System.out.print("Enter message to send to client: " + receivePacket.getAddress().getHostAddress() + ": ");
-                String userMessage = System.console().readLine();
+                System.out.print("Enter message to send to client " + receivePacket.getAddress().getHostAddress() + ": ");
+                String userMessage = input.nextLine();
                 sendData = userMessage.getBytes();
                 DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, receivePacket.getAddress(), receivePacket.getPort());
                 serverSocket.send(sendPacket);

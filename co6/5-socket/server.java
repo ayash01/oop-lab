@@ -1,26 +1,6 @@
 import java.net.*;
 import java.io.*;
 
-class Server {
-    public static void main(String[] args) {
-        try {
-            System.out.println("Server started");
-
-            ServerSocket serverSocket = new ServerSocket(3000);
-            InetAddress serverAddress = InetAddress.getLocalHost();
-            System.out.println("Server listening on " + serverAddress.getHostAddress() + ":3000");
-
-            while (true) {
-                Socket clientSocket = serverSocket.accept();
-                Thread thread = new Thread(new ClientHandler(clientSocket));
-                thread.start();
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-}
-
 class ClientHandler implements Runnable {
     private final Socket clientSocket;
 
@@ -47,6 +27,26 @@ class ClientHandler implements Runnable {
 
             System.out.println("Client disconnected: " + clientSocket.getInetAddress().getHostAddress());
             clientSocket.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+class TCPServer {
+    public static void main(String[] args) {
+        try {
+            ServerSocket serverSocket = new ServerSocket(3000);
+            InetAddress serverAddress = InetAddress.getLocalHost();
+            System.out.println("Server listening on " + serverAddress.getHostAddress() + ":3000");
+
+            System.out.println("Server started");
+
+            while (true) {
+                Socket clientSocket = serverSocket.accept();
+                Thread thread = new Thread(new ClientHandler(clientSocket));
+                thread.start();
+            }
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

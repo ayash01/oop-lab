@@ -3,7 +3,7 @@ import java.io.*;
 class EvenOddFiles {
     public static void main(String[] args) {
         try {
-            FileReader fileRead = new FileReader("output.txt");
+            FileReader fileRead = new FileReader("file.txt");
             FileWriter oddFileWriter = new FileWriter("odd.txt");
             FileWriter evenFileWriter = new FileWriter("even.txt");
 

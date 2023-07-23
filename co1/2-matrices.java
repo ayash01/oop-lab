@@ -43,9 +43,9 @@ class q2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter number of rows in matrices:");
+        System.out.print("Enter number of rows in matrices: ");
         int row = Integer.parseInt(input.nextLine());
-        System.out.println("Enter number of columns in matrices:");
+        System.out.print("Enter number of columns in matrices: ");
         int col = Integer.parseInt(input.nextLine());
 
         Matrix a = Matrix.defineMatrix(row, col);
